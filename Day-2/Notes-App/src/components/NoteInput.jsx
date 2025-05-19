@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import NotesContext from "../context/NotesContext";
+import NotesContext from "../context/NotesContext.js";
 import { AnimatePresence, motion } from "framer-motion";
 
 const NoteInput = () => {
@@ -24,9 +24,9 @@ const NoteInput = () => {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: 200, opacity: 0 }}
           transition={{ duration: 0.3, ease: "easeIn" }}
-          className={`h-screen w-full backdrop-blur-[1px] justify-center items-center fixed  z-10 flex`}
+          className={`h-screen w-full backdrop-blur-[1px] justify-center  fixed md:items-center z-10 flex`}
         >
-          <div className="border w-[80vw] md:w-[50vw] bg-white h-[60vh] rounded-xl flex flex-col relative shadow-2xl">
+          <div className="border mt-[70%] mb-[50%] md:mt-0 md:mb-0 w-[80vw] md:w-[50vw] bg-white h-[30vh] md:h-[60vh] rounded-xl flex flex-col relative shadow-2xl">
             <form onSubmit={(e) => e.preventDefault()}>
               <h1 className="font-medium text-lg self-start pl-5 pb-2 pt-2 tracking-wide">
                 Add notes

@@ -6,9 +6,10 @@ const NoteList = () => {
   const { notesState } = useContext(NotesContext);
   return (
     <>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-evenly">
         {notesState.notes !== null
           ? notesState.notes
+              .sort((a, b) => b.pinned - a.pinned)
               .filter((note) =>
                 notesState.searchQuery !== ""
                   ? note.text.includes(notesState.searchQuery)

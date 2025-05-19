@@ -16,7 +16,7 @@ const NoteSearch = () => {
             name="search"
             id="search"
             placeholder="Search for notes..."
-            className="border-2 focus:outline-none w-full py-2 px-2 m-2 rounded-lg"
+            className="border-2 focus:outline-none w-[95%] md:w-full py-2  px-2 m-2 rounded-lg"
             onChange={(e) =>
               dispatch({ type: "SEARCH_QUERY", payload: e.target.value })
             }
